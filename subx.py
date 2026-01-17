@@ -8,7 +8,7 @@ import base64
 import json
 import yaml  # 需安装 PyYAML
 
-# ================= 资源路径工具 (关键新增) =================
+# ================= 资源路径=================
 def resource_path(relative_path):
     """获取资源的绝对路径，适配 PyInstaller 打包后的临时目录"""
     try:
@@ -191,7 +191,7 @@ def parse_link(link):
 class ClashApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Clash Meta 配置生成器")
+        self.root.title("SUBX(clash配置生成器)")
         self.root.geometry("520x520")
         self.root.resizable(False, False)
 
@@ -228,7 +228,7 @@ class ClashApp:
         # Tab 2
         self.tab_url = ttk.Frame(self.notebook, padding=15)
         self.notebook.add(self.tab_url, text="🌐 订阅链接")
-        ttk.Label(self.tab_url, text="请输入机场/订阅链接 (http/https)：").pack(anchor="w", pady=(0,5))
+        ttk.Label(self.tab_url, text="请输入订阅链接 (http/https)：").pack(anchor="w", pady=(0,5))
         self.url_var = tk.StringVar()
         ttk.Entry(self.tab_url, textvariable=self.url_var, width=50).pack(fill="x", pady=5)
         ttk.Label(self.tab_url, text="* 自动下载并解码 Base64", foreground="gray", font=("Arial", 9)).pack(anchor="w")
