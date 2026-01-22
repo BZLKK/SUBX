@@ -256,7 +256,7 @@ class ClashApp:
         self.status_label.pack()
 
     def show_about(self):
-        messagebox.showinfo("关于作者", "联系邮箱：posnus@outlook.com")
+        messagebox.showinfo("关于作者", "联系邮箱：zl5@outlook.com")
 
     def select_file(self):
         filename = filedialog.askopenfilename(title="选择文件", filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")])
@@ -341,4 +341,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ClashApp(root)
     root.mainloop()
+
 
