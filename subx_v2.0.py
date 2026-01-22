@@ -757,7 +757,7 @@ class ClashApp:
     def __init__(self, root):
         self.root = root
         self.root.title("SubX")
-        self.root.geometry("520x400")
+        self.root.geometry("520x480")
         self.root.resizable(False, False)
 
         try:
@@ -1010,3 +1010,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ClashApp(root)
     root.mainloop()
+
